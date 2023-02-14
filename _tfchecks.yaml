@@ -12,7 +12,7 @@ checks:
   matchSpec:
     name: tags
     action: contains
-    value: TESTE
+    value: monitor_dynatrace
   errorMessage: Adicione a TAG TESTE
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
