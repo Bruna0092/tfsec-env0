@@ -19,4 +19,4 @@ run:
     mkdir -p ${TFSEC_INSTALL_PATH}
     curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | sed 's/sha256sum -c $checksum_file --quiet --ignore-missing/true/' | bash
     
-    tfsec ${inputs.directory} ${inputs.flags} --custom-check-url "https://github.com/Bruna0092/tfsec-env0/blob/908e1c4a4ff22be36336d78a8b66218b9d81114f/_tfchecks.yaml"
+    tfsec ${inputs.directory} ${inputs.flags} --custom-check-url https://raw.githubusercontent.com/Bruna0092/tfsec-env0/main/_tfchecks.yaml
