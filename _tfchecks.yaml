@@ -1,18 +1,18 @@
 ---
 checks:
-- code: My-bucket
-  description: customizar a tag
-  impact: fora do default
-  resolution: adicionar tag
+- code: My-Code
+  description: Custom check to ensure the TESTE tag is applied to EC2 instances
+  impact: Aumento de custos
+  resolution: Adicionar a TAG TESTE
   requiredTypes:
   - resource
   requiredLabels:
   - aws_instance
-  severity: ERROR
+  severity: HIGH
   matchSpec:
     name: tags
     action: contains
-    value: CostCentre
-  errorMessage: por favor corrija a tag informada 
+    value: TESTE
+  errorMessage: Adicione a TAG TESTE
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
