@@ -1,7 +1,7 @@
 ---
 severity_overrides:
-  ec2_tag_monitor_dynatrace: ERROR
+  TESTE: ERROR
   
 include:
-  - ec2_tag_monitor_dynatrace
+  - TESTE
   
