@@ -1,6 +1,6 @@
 ---
 checks:
-- code: ec2_tag_monitor_dynatrace
+- code: TESTE
   description: Verificação customizada de TAG
   impact: Aumento de custos
   resolution: Adicionar a TAG TESTE
@@ -12,7 +12,7 @@ checks:
   matchSpec:
     name: tags
     action: contains
-    value: monitor_dynatrace
+    value: teste
   errorMessage: Adicione a TAG TESTE
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
