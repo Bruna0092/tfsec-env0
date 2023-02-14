@@ -1,14 +1,14 @@
 ---
 checks:
-- code: My-Code
-  description: Custom check to ensure the TESTE tag is applied to EC2 instances
+- code: ec2_tag_monitor_dynatrace
+  description: Verificação customizada de TAG
   impact: Aumento de custos
   resolution: Adicionar a TAG TESTE
   requiredTypes:
   - resource
   requiredLabels:
   - aws_instance
-  severity: HIGH
+  severity: ERROR
   matchSpec:
     name: tags
     action: contains
