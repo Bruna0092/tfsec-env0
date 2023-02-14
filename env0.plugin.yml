@@ -1,4 +1,4 @@
-name: tfsec
+name: tfsec custom
 icon: https://aquasecurity.github.io/tfsec/v1.28.1/imgs/tfsec.png
 inputs:
   version:
@@ -19,4 +19,4 @@ run:
     mkdir -p ${TFSEC_INSTALL_PATH}
     curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | sed 's/sha256sum -c $checksum_file --quiet --ignore-missing/true/' | bash
     
-    tfsec ${inputs.directory} ${inputs.flags} .\custom_checks
+    tfsec ${inputs.directory} ${inputs.flags} .\.tfsec\custom_checks
