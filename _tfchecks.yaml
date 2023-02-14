@@ -1,0 +1,18 @@
+---
+checks:
+- code: My-bucket
+  description: customizar a tag
+  impact: fora do default
+  resolution: adicionar tag
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - aws_instance
+  severity: ERROR
+  matchSpec:
+    name: tags
+    action: contains
+    value: CostCentre
+  errorMessage: por favor corrija a tag informada 
+  relatedLinks:
+  - http://internal.acmecorp.com/standards/aws/tagging.html
