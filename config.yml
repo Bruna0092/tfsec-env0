@@ -2,6 +2,6 @@
 severity_overrides:
   ec2_tag_monitor_dynatrace: ERROR
   
- include:
+include:
   - ec2_tag_monitor_dynatrace
   
