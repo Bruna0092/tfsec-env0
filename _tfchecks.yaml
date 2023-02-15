@@ -1,7 +1,7 @@
 ---
 checks:
-- code: TAG_Environment
-  description: Custom check to ensure the Environment tag is applied
+- code: TESTE
+  description: customizar a tag
   impact: fora do default
   resolution: adicionar tag
   requiredTypes:
@@ -10,10 +10,9 @@ checks:
   - aws_instance
   severity: ERROR
   matchSpec:
-      name: tags
-      action: contains
-      value: CostCentre
-  errorMessage: The required Environment tag was missing
+    name: tags
+    action: contains
+    value: CostCentre
+  errorMessage: por favor corrija a tag informada 
   relatedLinks:
-      - http://internal.acmecorp.com/standards/aws/tagging.html
-   
+  - http://internal.acmecorp.com/standards/aws/tagging.html
