@@ -1,6 +1,6 @@
 ---
 checks:
-- code: TESTE
+- code: CUSTOM01
   description: Verificacao customizada de TAGs
   impact: Fora do default
   resolution: Adicionar a TAG monitor_dynatrace
@@ -15,4 +15,4 @@ checks:
     value: monitor_dynatrace
   errorMessage: A Tag monitor_dynatrace esta faltando
   relatedLinks:
-  - http://internal.acmecorp.com/standards/aws/tagging.html
+  - https://registry.terraform.io/providers/hashicorp/aws/4.35.0/docs/resources/instance#tags
