@@ -2,5 +2,5 @@
 severity_overrides:
   TESTE: ERROR
   
-  include:
+include:
   - TESTE
