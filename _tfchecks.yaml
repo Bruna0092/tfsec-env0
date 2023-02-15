@@ -8,6 +8,7 @@ checks:
   - resource
   requiredLabels:
   - aws_instance
+  severity: LOW
   matchSpec:
     name: tags
     action: contains
