@@ -1,3 +1,3 @@
 ---
 severity_overrides:
-  TAG_Environment: ERROR
+  TESTE: ERROR
