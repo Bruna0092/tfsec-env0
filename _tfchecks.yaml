@@ -10,9 +10,9 @@ checks:
   - aws_instance
   severity: ERROR
   matchSpec:
-    name: monitor_dynatrace
+    name: tags
     action: notContains
-    value: "True"
+    value: monitor_dynatrace
   errorMessage: por favor corrija a tag informada 
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
