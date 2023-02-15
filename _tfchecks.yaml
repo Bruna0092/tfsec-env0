@@ -1,21 +1,23 @@
 ---
 checks:
 - code: TAG_Environment
-    description: Custom check to ensure the Environment tag is applied
-    errorMessage: The required Environment tag was missing
-    matchSpec:
-      action: contains
-      name: tags
-      value:
+  description: Custom check to ensure the Environment tag is applied
+  impact: fora do default
+  resolution: adicionar tag
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - aws_instance
+  severity: ERROR
+  matchSpec:
+    name: tags
+    action: contains
+    value:
         environment:
-          action: isAny
-          value:
-            - production
-            - test
-            - development
-    requiredTypes:
-    - resource
-    severity: ERROR
-    requiredLabels:
-    - aws_instance
+            action: isAny
+            value:
+                - production
+                - test
+                - development
+  errorMessage: The required Environment tag was missing
    
