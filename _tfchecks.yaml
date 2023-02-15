@@ -3,7 +3,7 @@ checks:
 - code: TESTE
   description: customizar a tag
   impact: fora do default
-  resolution: adicionar tag
+  resolution: adicionar tag monitor_dynatrace
   requiredTypes:
   - resource
   requiredLabels:
@@ -11,7 +11,7 @@ checks:
   severity: ERROR
   matchSpec:
     name: monitor_dynatrace
-    action: contains
+    action: notContains
     value: "True"
   errorMessage: por favor corrija a tag informada 
   relatedLinks:
