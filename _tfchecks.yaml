@@ -11,7 +11,7 @@ checks:
   severity: ERROR
   matchSpec:
     name: tags
-    action: contains
+    action: notContains
     value: teste
   errorMessage: Adicione a TAG TESTE
   relatedLinks:
