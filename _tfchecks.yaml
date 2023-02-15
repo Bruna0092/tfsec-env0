@@ -10,14 +10,10 @@ checks:
   - aws_instance
   severity: ERROR
   matchSpec:
-    name: tags
-    action: contains
-    value:
-        environment:
-            action: isAny
-            value:
-                - production
-                - test
-                - development
+      name: tags
+      action: notContains
+      value: CostCentre
   errorMessage: The required Environment tag was missing
+  relatedLinks:
+      - http://internal.acmecorp.com/standards/aws/tagging.html
    
