@@ -11,7 +11,7 @@ checks:
   severity: ERROR
   matchSpec:
     name: tags
-    action: notContains
+    action: contains
     value: monitor_dynatrace
   errorMessage: por favor corrija a tag informada 
   relatedLinks:
