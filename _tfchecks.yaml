@@ -11,7 +11,7 @@ checks:
   severity: ERROR
   matchSpec:
       name: tags
-      action: notContains
+      action: contains
       value: CostCentre
   errorMessage: The required Environment tag was missing
   relatedLinks:
