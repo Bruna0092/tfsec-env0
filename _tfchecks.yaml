@@ -1,18 +1,21 @@
 ---
 checks:
-- code: TESTE
-  description: Verificação customizada de TAG
-  impact: Aumento de custos
-  resolution: Adicionar a TAG TESTE
-  requiredTypes:
-  - resource
-  requiredLabels:
-  - aws_instance
-  severity: ERROR
-  matchSpec:
-    name: tags
-    action: notContains
-    value: teste
-  errorMessage: Adicione a TAG TESTE
-  relatedLinks:
-  - http://internal.acmecorp.com/standards/aws/tagging.html
+- code: TAG_Environment
+    description: Custom check to ensure the Environment tag is applied
+    errorMessage: The required Environment tag was missing
+    matchSpec:
+      action: contains
+      name: tags
+      value:
+        environment:
+          action: isAny
+          value:
+            - production
+            - test
+            - development
+    requiredTypes:
+    - resource
+    severity: ERROR
+    requiredLabels:
+    - aws_instance
+   
