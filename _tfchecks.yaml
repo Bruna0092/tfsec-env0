@@ -10,9 +10,9 @@ checks:
   - aws_instance
   severity: ERROR
   matchSpec:
-    name: tags
+    name: monitor_dynatrace
     action: contains
-    value: CostCentre
+    value: "True"
   errorMessage: por favor corrija a tag informada 
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
